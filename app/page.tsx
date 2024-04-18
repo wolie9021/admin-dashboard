@@ -1,6 +1,7 @@
 import { getUsers } from '@/lib/db';
 import { UsersTable } from './users-table';
 import { Search } from './search';
+import SupTable from './notes/page';
 
 export default async function IndexPage({
   searchParams
@@ -19,7 +20,7 @@ export default async function IndexPage({
       <div className="w-full mb-4">
         <Search value={searchParams.q} />
       </div>
-      <UsersTable users={users} offset={newOffset} />
+      <SupTable/>
     </main>
   );
 }
